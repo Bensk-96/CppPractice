@@ -14,7 +14,6 @@ int main()
 
     uptr3.reset(new int(3));
 
-    
     std::cout << "Valule of uptr3 is " << *uptr3 << std::endl;
 
     std::cout << "Adress of uptr3 is " << uptr3.get() << std::endl;
@@ -69,12 +68,6 @@ int main()
     std::cout << "Use count is " << sptr1.use_count() << std::endl;
 
     std::cout << "--------------------"  << std::endl;
-
-
-
-
-
-
 
     return 0;
 }
