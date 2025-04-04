@@ -38,8 +38,13 @@ public:
         // converted to shared pointers before usage
         // m_next_location.lock() : if weak pointer is empty, return empty shared pointers
         // std::shared_ptr<Route>(m_next_location) : if weak pointer is empty, throws std::bad_weak_ptr
-        std::string nextLocation = m_next_location.lock()->getName(); 
-        std::cout << "The next location after " << m_location <<  " is " << nextLocation << std::endl;
+        if (auto next = m_next_location.lock()){
+            std::cout << "The next location after " << m_location <<  " is " << next->getName() << std::endl;
+        } else {
+            std::cout << m_location << " has no next location" << std::endl;
+        }
+        // std::string nextLocation = m_next_location.lock()->getName(); 
+        // std::cout << "The next location after " << m_location <<  " is " << nextLocation << std::endl;
     }
 
     ~Route()

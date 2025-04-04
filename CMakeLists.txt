@@ -9,3 +9,5 @@ add_subdirectory(smart_pointers_basic/)
 add_subdirectory(smart_pointers_objects/)
 
 add_subdirectory(weak_pointers_circular_ref/)
+
+add_subdirectory(virtual_destructor/)
