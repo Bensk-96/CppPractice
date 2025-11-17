@@ -41,7 +41,7 @@ int main()
 
     // std::shared_ptr<int>sptr2(new int(5));
     
-    // std::unique_ptr<int> uptr4 = std::unique_ptr<int>(sptr2);
+    // std::unique_ptr<int> uptr = std::unique_ptr<int>(sptr2);
 
     /* use count of shared pointer*/
 
